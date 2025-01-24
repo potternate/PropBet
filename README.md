@@ -2,6 +2,9 @@
 
 PropBet is a modern web application for sports betting enthusiasts, focusing on NBA player props. Built with React, TypeScript, and Firebase, it offers a seamless and engaging betting experience with real-time updates and unique betting mechanics.
 
+## Live Demo
+
+Visit the web application at: [PropBet](https://prop-bet.netlify.app)
 ## Features
 
 ### Core Betting Features
@@ -133,9 +136,6 @@ src/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Live Demo
-
-Visit the live application at: [PropBet Live](https://fanciful-snickerdoodle-fbe99e.netlify.app)
 
 ## License
 
