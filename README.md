@@ -4,7 +4,7 @@ PropBet is a modern web application for sports betting enthusiasts, focusing on 
 
 ## Live Demo
 
-Visit the live application at: [PropBet Live](https://prop-bet.netlify.app)
+Visit the live application at: [PropBet Web App](https://prop-bet.netlify.app)
 
 ## Features
 
