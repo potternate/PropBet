@@ -1,10 +1,11 @@
 # PropBet
 
-PropBet is a modern web application for sports betting enthusiasts, focusing on NBA player props. Built with React, TypeScript, and Firebase, it offers a seamless and engaging betting experience with real-time updates and unique betting mechanics.
+PropBet is a modern web application for sports betting enthusiasts, focusing on NBA player props. Built with React, TypeScript, and Supabase, it offers a seamless and engaging betting experience with real-time updates and unique betting mechanics.
 
 ## Live Demo
 
-Visit the web application at: [PropBet](https://prop-bet.netlify.app)
+Visit the live application at: [PropBet Live](https://prop-bet.netlify.app)
+
 ## Features
 
 ### Core Betting Features
@@ -25,6 +26,14 @@ Visit the web application at: [PropBet](https://prop-bet.netlify.app)
 - 💰 Virtual currency system
 - 📱 Responsive design for all devices
 - 🔄 Real-time updates
+- 📈 Historical player performance data
+
+### Player Statistics
+- 📊 Comprehensive player statistics from Supabase
+- 🏀 Previous games performance tracking
+- ⚡ Fast and efficient data querying
+- 📅 Historical game data
+- 🔍 Detailed box scores
 
 ### Admin Features
 - 🎮 Comprehensive admin dashboard
@@ -42,15 +51,47 @@ Visit the web application at: [PropBet](https://prop-bet.netlify.app)
 - Vite for build tooling
 
 ### Backend & Services
+- Supabase for database and real-time features
 - Firebase Authentication
 - Firebase Realtime Database
 - The Odds API integration
+
+## Database Schema
+
+### Tables
+- `games` - Stores game information
+  - `id`: Game identifier
+  - `date`: Game date
+  - `home_team_id`: Home team identifier
+  - `away_team_id`: Away team identifier
+
+- `box_scores` - Player performance statistics
+  - `id`: Box score identifier
+  - `player_id`: Player identifier
+  - `game_id`: Game identifier
+  - `points`: Points scored
+  - `rebounds`: Total rebounds
+  - `assists`: Total assists
+  - `steals`: Total steals
+  - `blocks`: Total blocks
+  - `minutes`: Minutes played
+  - `opponent`: Opponent team
+
+- `players` - Player information
+  - `id`: Player identifier
+  - `name`: Player name
+  - `team_id`: Current team identifier
+
+- `teams` - Team information
+  - `id`: Team identifier
+  - `name`: Team name
 
 ## Getting Started
 
 ### Prerequisites
 - Node.js (v18 or higher)
 - npm or yarn
+- Supabase account
 - Firebase account
 - The Odds API key
 
@@ -66,6 +107,8 @@ VITE_FIREBASE_APP_ID=your_app_id
 VITE_FIREBASE_DATABASE_URL=your_database_url
 VITE_ODDS_API_KEY=your_odds_api_key
 VITE_ADMIN_EMAIL=admin_email
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
 ### Installation
@@ -103,6 +146,8 @@ src/
 ├── lib/              # Utilities
 │   ├── database.ts   # Firebase operations
 │   ├── firebase.ts   # Firebase config
+│   ├── supabase.ts   # Supabase client
+│   ├── database.types.ts # Supabase types
 │   ├── playerIds.ts  # NBA player IDs
 │   ├── playerTeams.ts# Player team mappings
 │   └── teamLogos.ts  # Team logo URLs
@@ -136,7 +181,6 @@ src/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -146,3 +190,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - NBA data from The Odds API
 - Team logos from NBA official resources
 - Icons from Lucide React
+- Database hosting by Supabase
